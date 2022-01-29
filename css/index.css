@@ -9,20 +9,20 @@
   src: url("../fonts/product-sans/ProductSansBold.ttf") format("truetype");
 }
 
-body {
+html, body {
     font-family: 'ProductSans';
     font-weight: 500;
     margin: 0;
     padding: 0;
     color: white;
     background-color: white;
-    width: 100%;
+    height: 100%;
 
 }
 
 .parent {
-    height: calc(100vh - (118px + 52px));
-    margin: 0;
+    height: 100%;
+    /* overflow:hidden; */
 }
 
 #linklist2 {
@@ -40,7 +40,8 @@ body {
     text-align: center;
 }
 
-.footer {
+.footerMobile, .footerMain {
+  color:white;
   background-color: #006db9;
   text-align: center;
   height: 20px;
@@ -70,6 +71,7 @@ body {
 }
 
 #profileName {
+    display: block;
     padding: 0.5rem;
     font-size: 1.8em;
     font-family: 'ProductSansBold';
@@ -81,7 +83,7 @@ body {
     padding: 0.5rem;
 }
 
-.contentMainMobile {
+#contentMainMobile {
     display: block;
     background-color: white;
     text-align: center;
@@ -91,24 +93,198 @@ body {
     grid-template-columns: repeat(2, minmax(140px, 1fr));
     grid-template-rows: auto;
     place-items: center;
-    height: 90%;
+    height: 75%;
 }
 
+#contentMain {
+  display: none; 
+  color: black;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
+
+#splash {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background-image: url("../media/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+.navbar {
+  height: 70px;
+  background-color: #006db9;
+}
+
+#navbarIcon {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  float: left;
+  padding: 10px;
+}
+
+.navbaritems {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbaritem {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+#typewriterContainer {
+  height: calc(100vh - 70px);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.typewriterline {
+  color: white;
+  position: relative;
+  top: 40%;  
+  width: 12em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  font-size: 6vw;
+  font-family: 'ProductSansBold';
+}
+
+.typewriter {
+  animation: typewriter 3s steps(34) 1s 1 normal both,
+             blinkTextCursor 800ms steps(34) infinite normal;
+}
+
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 12em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+#teamSection {
+  width: 100%;
+  position: relative;
+  background-color: #006db9;
+  color: white;
+  text-align: center;
+  padding: 70px 0px 80px 0px;
+}
+
+.sectionTitle {
+  font-family: "ProductSansBold";
+  font-size: 4vw;
+}
+
+#missionContainer {
+  height: 40%;
+  margin-top: 65px;
+  position:relative;
+  text-align: center;
+}
+
+#missionStatement{
+  font-size: 1.5em;
+  width: 66%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.teamContainer {
+  height:50%;
+  width:100%;
+  position: relative;
+  display: grid;
+  grid-row-gap: 30px;
+  grid-template-columns: repeat(4, minmax(140px, 1fr));
+  grid-template-rows: auto;
+  place-items: center;
+}
+
+.introIMGMain {
+  width: 90%;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);
+  transition:transform 0.25s ease;
+}
+
+.introIMGMain:hover {
+  -webkit-transform:scale(1.1);
+  transform:scale(1.1);
+  cursor: pointer;
+}
+
+#gallerySection {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding-top: 80px;
+}
+
+#comingSoon {
+  padding-top: 100px;
+  width: 50%;
+}
+
+
 @media (min-width: 900px) {
-    .parent {
-        height: 100vh;
+
+    #profileName {
+      display: none;
     }
-    .contentMainMobile {
+
+    #profilePic {
+      display: none;
+    }
+
+    .header {
+      display: none;
+    }
+
+    .footerMain {
+      position: relative;
+    }
+
+    .footerMobile {
+      display:none;
+    }
+
+    #contentMainMobile {
         display: none;
+    }
+
+    #contentMain {
+      display: block;
     }
 
     .linkButtonMain {
         font-size: 30pt;
     }
+
 }
 .linkButtonMain {
     font-family: 'ProductSansBold';
-    font-size: 20pt;
+    font-size: 5vw;
     color: white;
     text-decoration: none;
     display: flex;
@@ -119,7 +295,7 @@ body {
     cursor: pointer;
     background-color: #0096ff;
     background-size: cover;
-    border-radius: 15px;
+    border-radius: 45px;
     box-shadow: 10px 10px 0 #006db9;
     border: solid 3px #006db9;
     line-height: 1.5;
@@ -201,6 +377,8 @@ a:active.linkButtonMain:after {
     border-radius: 15px;
     background-color: #0096ff;
     background-size: cover;
+    box-shadow: 14px 14px 0 #006db9;
+    border: solid 3px #006db9;
 }
 
 .linkButton:hover::after {
@@ -277,11 +455,24 @@ li {
 #backBtn {
     float: left;
     padding: 10px;
+    margin-bottom: 40px;
     width: 80px;
     color: white;
     text-decoration: none;
     background-color: #0096ff;
     border-radius: 15px;
     display: inline;
+    box-shadow: 6px 6px 0 #006db9;
+    border: solid 3px #006db9;
+}
+
+.introIMG {
+  position: relative;
+  margin-top: 25px;
+  width: 100%;
+  background-image: url("media/2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 

@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="lightbox/css/lightbox.min.css">
+    <script src="lightbox/js/lightbox-plus-jquery.min.js">
+    </script>
+
     <title>AHS Engineering</title>
 </head>
 
@@ -22,17 +26,99 @@
         </header>
 
         <!-- Mobile Content -->
-        <div class="contentMainMobile">
+        <div id="contentMainMobile">
             <a class="linkButtonMain" href="http://bit.ly/engclubmerch">Club Merch</a>
             <a class="linkButtonMain" href="https://www.futureengineers.org/nasatechrise/gallery/51651">NASA
                 <br>Techrise</a>
             <a class="linkButtonMain" href="socials.html">Socials</a>
             <a class="linkButtonMain" href="intros.html">Meet <br> the Team</a>
         </div>
-        <footer class="footer">
-            <h>Developed by <a href="http://ssmytech.com" style="color: white;">SSMYTech</a></h>
+
+        <div id="contentMain">
+            <a href="#home">
+                <img id="navbarIcon" src="media/Aragon_Large_Outline.png" alt="AHS Engineering">
+            </a>
+
+            <div class="navbar">
+                <div class="navbaritems">
+                    <!-- <a href="#home" class="navbaritem">Home</a>
+                    <a href="#news" class="navbaritem">News</a>
+                    <a href="#contact" class="navbaritem">Contact</a>
+                    <a href="#about" class="navbaritem">About</a> -->
+                </div>
+
+            </div>
+
+            <div id="splash">
+            </div>
+
+            <div id="typewriterContainer">
+                <p class="typewriter typewriterline">
+                    Aragon Engineering Club.
+                </p>
+            </div>
+
+            <div id="missionContainer">
+                <h class="sectionTitle">Our Mission Statement 🚀</h>
+                <p id="missionStatement">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+
+            <div id="teamSection">
+
+                <div id="particle-canvas"></div>
+
+                <h class="sectionTitle">Meet the Team 📣</h>
+
+                <!-- Credit for lightbox https://github.com/lokesh/lightbox2/releases -->
+                <div class="teamContainer">
+                    <a href="media/2.png" data-lightbox="mygallery">
+                        <img src="media/2.png" alt="President Rachel Ma" class="introIMGMain">
+                    </a>
+
+                    <a href="media/3.png" data-lightbox="mygallery">
+                        <img src="media/3.png" alt="Vice President Alex Ding" class="introIMGMain"
+                            style="margin-top: 45%;">
+                    </a>
+
+                    <a href="media/4.png" data-lightbox="mygallery">
+                        <img src="media/4.png" alt="Treasurer Beth Yeung" class="introIMGMain">
+                    </a>
+
+                    <a href="media/5.png" data-lightbox="mygallery">
+                        <img src="media/5.png" alt="Secretary Vishal Dandamudi" class="introIMGMain"
+                            style="margin-top: 45%;">
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div id="gallerySection">
+                <h class="sectionTitle">Gallery 🖼️</h>
+
+                <div id="galleryContainer">
+                    <img src="media/coming-soon.png" id="comingSoon" alt="">
+                </div>
+
+            </div>
+
+            <footer class="footerMain">
+                <h>Developed by <a href="http://ssmytech.com" style="color:white">SSMYTech</a></h>
+            </footer>
+
+        </div>
+
+        <footer class="footerMobile">
+            <h>Developed by <a href="http://ssmytech.com" style="color:white">SSMYTech</a></h>
         </footer>
     </div>
 </body>
+
 
 </html>
